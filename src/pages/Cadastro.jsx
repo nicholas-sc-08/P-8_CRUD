@@ -7,6 +7,9 @@ function Cadastro() {
 
     const [usuario, set_usuario] = useState({nome: ``, email: ``, senha: ``, confirmar_senha: ``});
     const {usuarios, set_usuarios} = useContext(GlobalContext);
+    let email_ja_cadastrado = false;
+    let senhas_sao_iguais = false;
+    const [mensagem_de_erro, set_mensagem_de_erro] = useState(``);
 
     useEffect(() => {
 
@@ -32,17 +35,69 @@ function Cadastro() {
 
         e.preventDefault();
 
-        try {
-            
-           const resposta = await axios.post(`http://localhost:3000/usuarios`, usuario);
-            
-           pegar_registros_de_usuarios();
+        for(let i = 0; i < usuarios.length ; i++){
 
-           set_usuario({nome: ``, email: ``, senha: ``, confirmar_senha: ``});
+            if(usuarios[i].email == usuario.email){
+
+                email_ja_cadastrado = true;
+            };
+        };
+
+        if(usuario.senha == usuario.confirmar_senha){
+
+            senhas_sao_iguais = true;
+        };
+
+        if(senhas_sao_iguais && email_ja_cadastrado == false){
+
+            try {
+                
+            const resposta = await axios.post(`http://localhost:3000/usuarios`, usuario);
+                
+            pegar_registros_de_usuarios();
+
+            set_usuario({nome: ``, email: ``, senha: ``, confirmar_senha: ``});
+            set_mensagem_de_erro(``);
+
+            } catch (erro) {
+                
+                console.error(`Erro ao cadastrar o/a usuário`, erro);
+                
+            };
+
+        } else {
+
+            switch(true){
+
+                case senhas_sao_iguais == false && email_ja_cadastrado == true :
+
+                set_mensagem_de_erro(`As senhas devem ser iguais e o email já está cadastrado!`);
+                break;
+
+                case senhas_sao_iguais == true && email_ja_cadastrado == true :
+
+                set_mensagem_de_erro(`Email já cadastrado!`);
+                break;
+
+                case senhas_sao_iguais == false && email_ja_cadastrado == false :
+
+                set_mensagem_de_erro(`Senhas devem ser iguais!`);
+                break;
+            };
+        };
+    };
+
+    const deletar_usuario = async () => {
+
+        try {
+
+            const resposta = await axios.delete(`http://localhost:3000/${id}/usuarios`);
+
+            pegar_registros_de_usuarios();
 
         } catch (erro) {
-            
-            console.error(`Erro ao cadastrar o/a usuário`, erro);
+
+            console.error(`Erro ao deletar usuário`, erro);
             
         };
     };
@@ -84,10 +139,22 @@ function Cadastro() {
 
             <button type='submit'>Cadastrar</button>
 
+            {mensagem_de_erro}
+
         </div>
 
         </form>
 
+        {usuarios.map( usuario => (
+            
+            <div key={usuario.id}>
+
+               <p>Nome: {usuario.nome}</p>
+                <p>Email: {usuario.email}</p>
+                <button onClick={deletar_usuario}>Deletar Conta</button>
+
+            </div>
+        ))}
     </div>
   )
 }
