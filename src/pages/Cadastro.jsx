@@ -87,11 +87,11 @@ function Cadastro() {
         };
     };
 
-    const deletar_usuario = async () => {
+    const deletar_usuario = async (id) => {
 
         try {
 
-            const resposta = await axios.delete(`http://localhost:3000/${id}/usuarios`);
+            const resposta = await axios.delete(`http://localhost:3000/usuarios/${id}`);
 
             pegar_registros_de_usuarios();
 
@@ -151,7 +151,8 @@ function Cadastro() {
 
                <p>Nome: {usuario.nome}</p>
                 <p>Email: {usuario.email}</p>
-                <button onClick={deletar_usuario}>Deletar Conta</button>
+                <p>Senha: {usuario.senha}</p>
+                <button onClick={() => deletar_usuario(usuario.id_usuario)}>Deletar Conta</button>
 
             </div>
         ))}
