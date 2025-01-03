@@ -105,7 +105,7 @@
 
 <p>Crie seu database no pgAdmin, criei um chamado 'crud', nele você criará um script. Deixarei disponível o commando para criação de tabela para facilitar!</p>
 
-```pg
+```sql
   CREATE TABLE usuarios(
 
     id_usuario SERIAL PRIMARY KEY,
@@ -114,3 +114,4 @@
     senha VARCHAR(12)
   );
 ```
+<p>Após criar a tabela já está tudo configurado! Caso queira fazer alguma alteração fique a vontade!</p>
