@@ -75,6 +75,42 @@
   npm i pg
 ```
 
+<p>Feito isso, dentro arquivo 'server.js' localizado dentro da pasta back, você precisa configurar algumas coisas, ou não 😋</p>
+
+```js
+  const express = require('express');
+  const cors = require('cors');
+  const { Pool } = require('pg');
+  const app = express();
+  const pool = new Pool({
+    user: 'postgres', 
+    host: 'localhost',
+    database: 'crud', 
+    password: 'postgres', 
+    port: 5432, 
+  });
+```
+
+<p>Logo no início do código, no caso do arquivo 'server.js', aonde possui a linhas 'user', você deve colocar o nome de usuário no meu caso é 'postgres' assim como a senha. Coloque seu nome de usuário do pgAdmin. Já no host, neste projeto iremos utilizar o localhost então não é necessário alterar. Então no 'database', você irá colocar o nome do seu database aonde você armazenará as informações dos usuários. Já a senha, coloque a senha do seu pgAdmin. E por fim a ultima linha ali, a 'port', coloque o número da porta aonde o seu pgAdmin utiliza no caso o meu/o padrão é 5432.</p>
+
+<p>Caso as informações são as mesmas, só as mantenham.</p>
+
 <p>Instale a biblioteca pg para conseguir executar comandos do SQL no projeto! E não diretamente na IDE.</p>
 
 <p>🔊 Certifique-se que as bibliotecas, express, pg e a do node estajam instaladas dentro da pasta back.</p>
+
+## <img src='https://github.com/nicholas-sc-08/P-8_CRUD/blob/main/Imagens_Readme/PostgreSQL_Logo.png' width='25px' height='25px'> Configurando o Banco de Dados
+
+<p>Bom, neste projeto para o armazenamendo de informações utilizaremos a plataforma do pgAdmin.</p>
+
+<p>Crie seu database no pgAdmin, criei um chamado 'crud', nele você criará um script. Deixarei disponível o commando para criação de tabela para facilitar!</p>
+
+```pg
+  CREATE TABLE usuarios(
+
+    id_usuario SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(150),
+    senha VARCHAR(12)
+  );
+```
