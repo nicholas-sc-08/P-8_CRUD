@@ -9,7 +9,7 @@
 
 <p>Um projeto bem simples até, um CRUD funcional porém não estilizado 😉</p>
 
-## <img src='https://github.com/nicholas-sc-08/P-8_CRUD/blob/main/Imagens_Readme/Gif_React.gif' width='50px' height='50px'> Instalação do Projeto
+## <img src='https://github.com/nicholas-sc-08/P-8_CRUD/blob/main/Imagens_Readme/Gif_React.gif' width='25px' height='25px'> Instalação do Projeto
 
 <p>Iremos utilizar o Git para fazer a instalação do projeto, escolha qual o caminho no explorador de arquivos você queira colocar o projeto. Então abra o terminal do windows ou prompt de comando. Digite o comando:</p>
 
@@ -25,4 +25,26 @@
 
 <p>Vamos instalar as depêndencias para o projeto conseguir rodar.</p>
 
-## Instalando Depências
+## <img src='https://github.com/nicholas-sc-08/P-8_CRUD/blob/main/Imagens_Readme/Gif_Node.gif' width='25px' height='25px'> Instalando Depências
+
+<p>Inicialmente dentro da pasta src do FrontEnd, execute os comandos a seguir:</p>
+
+```git
+  npm i
+```
+
+<p>O comando 'npm i' ou 'npm install' ele irá instalar as dependências do NodeJS, assim conseguindo rodar seu projeto localmente (neste caso).</p>
+
+```git
+  npm i react-router-dom
+```
+
+<p>Já o 'npm i react-router-dom' é uma biblioteca do React, que permite você circular dados entre arquivos entre outras funções. Por mais que não necessite devido ao fato de conter somente um arquivo, achei que seria interresante aplicar para futuras alterações!</p>
+
+```git
+  npm i axios
+```
+
+<p>Executando o commando 'npm i axios', aplicará o axios em seu projeto, uma API que passará os dados do FrontEnd, para o BackEnd, permitindo a circulação de dados! Caso queira saber mais sobre o axios, acesse o link logo abaixo:</p>
+
+<a href='https://axios-http.com/ptbr/docs/intro'>https://axios-http.com/ptbr/docs/intro</a>
