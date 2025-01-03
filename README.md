@@ -101,7 +101,9 @@
 
 <p>🔊 Certifique-se que as bibliotecas, express, pg e a do node estajam instaladas dentro da pasta back.</p>
 
-## <img src='https://github.com/nicholas-sc-08/P-8_CRUD/blob/main/Imagens_Readme/PostgreSQL_Logo.png' width='50px' height='50px'> Configurando o Banco de Dados0
+###
+
+## <img src='https://github.com/nicholas-sc-08/P-8_CRUD/blob/main/Imagens_Readme/PostgreSQL_Logo.png' width='50px' height='50px'> Configurando o Banco de Dados
 
 <p>Bom, neste projeto para o armazenamendo de informações utilizaremos a plataforma do pgAdmin.</p>
 
@@ -117,3 +119,5 @@
   );
 ```
 <p>Após criar a tabela já está tudo configurado! Caso queira fazer alguma alteração fique a vontade!</p>
+
+###
