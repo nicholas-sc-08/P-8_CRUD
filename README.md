@@ -25,6 +25,8 @@
 
 <p>Vamos instalar as depêndencias para o projeto conseguir rodar.</p>
 
+##
+
 ## <img src='https://github.com/nicholas-sc-08/P-8_CRUD/blob/main/Imagens_Readme/Gif_Node.gif' width='25px' height='25px'> Instalando Depências
 
 <p>Inicialmente dentro da pasta src do FrontEnd, execute os comandos a seguir:</p>
@@ -99,7 +101,7 @@
 
 <p>🔊 Certifique-se que as bibliotecas, express, pg e a do node estajam instaladas dentro da pasta back.</p>
 
-## <img src='https://github.com/nicholas-sc-08/P-8_CRUD/blob/main/Imagens_Readme/PostgreSQL_Logo.png' width='25px' height='25px'> Configurando o Banco de Dados
+## <img src='https://github.com/nicholas-sc-08/P-8_CRUD/blob/main/Imagens_Readme/PostgreSQL_Logo.png' width='50px' height='50px'> Configurando o Banco de Dados0
 
 <p>Bom, neste projeto para o armazenamendo de informações utilizaremos a plataforma do pgAdmin.</p>
 
