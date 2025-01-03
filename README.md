@@ -48,3 +48,31 @@
 <p>Executando o commando 'npm i axios', aplicará o axios em seu projeto, uma API que passará os dados do FrontEnd, para o BackEnd, permitindo a circulação de dados! Caso queira saber mais sobre o axios, acesse o link logo abaixo:</p>
 
 <a href='https://axios-http.com/ptbr/docs/intro'>https://axios-http.com/ptbr/docs/intro</a>
+
+<p>Seguindo para instlação de dependências do BackEnd, utilizaremos algumas bibliotecas. Abra o prompt de commando ou windows terminal, certifique-se que no terminal você esteja dentro da pasta 'back'. Caso não esteja, repita o comando executado anteriormente.</p>
+
+```git
+  cd 'caminho_para_a_pasta_back'
+```
+
+<p>Você instalará as seguintes depêndencias:</p>
+
+```git
+  npm i 
+```
+
+<p>Novamente instale o NodeJS, porém desta vez dentro da pasta do BackEnd para rodar o BackEnd.</p>
+
+```git
+  npm i express
+```
+
+<p>Instale a biblioteca do Express. Ela criará rotas do BackEnd para o Banco de Dados, podendo assim ocorrer a navegação desses dados para o Banco, neste caso seria o nome, email e senha.</p>
+
+<p>Seguindo então instale a biblioteca pg.</p>
+
+```git
+  npm i pg
+```
+
+<p>Instale a biblioteca pg para conseguir executar comandos do SQL no projeto! E não diretamente na IDE.</p>
