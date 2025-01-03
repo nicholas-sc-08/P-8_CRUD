@@ -76,3 +76,5 @@
 ```
 
 <p>Instale a biblioteca pg para conseguir executar comandos do SQL no projeto! E não diretamente na IDE.</p>
+
+<p>🔊 Certifique-se que as bibliotecas, express, pg e a do node estajam instaladas dentro da pasta back.</p>
