@@ -102,6 +102,21 @@ function Cadastro() {
         };
     };
 
+    const atualizar_usuario = async (id) => {
+
+        try {
+   
+            const resposta = await axios.put(`http://localhost:3000/usuarios/${id}`, usuario);
+            
+            pegar_registros_de_usuarios();
+
+        } catch(erro) {
+  
+            console.error(`Erro ao atualizar usuário`, erro);
+            
+        };
+    };
+
     return (
     <div>
 
@@ -145,17 +160,21 @@ function Cadastro() {
 
         </form>
 
-        {usuarios.map( usuario => (
-            
-            <div key={usuario.id}>
+        <div className='dv_cards'>
 
-               <p>Nome: {usuario.nome}</p>
-                <p>Email: {usuario.email}</p>
-                <p>Senha: {usuario.senha}</p>
-                <button onClick={() => deletar_usuario(usuario.id_usuario)}>Deletar Conta</button>
+            {usuarios.map( i => (
+                
+                <div className='card' key={i.id} onMouseLeave={() => set_usuario({nome: i.nome, email: i.email, senha: i.senha})}>
 
-            </div>
-        ))}
+                <p>Nome: {i.nome}</p>
+                    <p>Email: {i.email}</p>
+                    <p>Senha: {i.senha}</p>
+                    <button onClick={() => deletar_usuario(i.id_usuario)}>Deletar Conta</button>
+                    <button onClick={() => atualizar_usuario(i.id_usuario)}>Atualizar</button>
+                </div>
+            ))}
+
+        </div>
     </div>
   )
 }

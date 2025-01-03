@@ -1,0 +1,12 @@
+.dv_cards{
+
+    display: flex;
+}
+
+.card{
+
+    background-color: #f5f5f5;
+
+    margin: 2vw;
+    padding: 2vw;
+}
