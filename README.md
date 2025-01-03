@@ -109,9 +109,9 @@
   CREATE TABLE usuarios(
 
     id_usuario SERIAL PRIMARY KEY,
-    nome VARCHAR(100),
-    email VARCHAR(150),
-    senha VARCHAR(12)
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    senha VARCHAR(12) NOT NULL
   );
 ```
 <p>Após criar a tabela já está tudo configurado! Caso queira fazer alguma alteração fique a vontade!</p>
