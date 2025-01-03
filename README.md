@@ -9,4 +9,20 @@
 
 <p>Um projeto bem simples até, um CRUD funcional porém não estilizado 😉</p>
 
-## Instalação do Projeto
+## <img src='https://github.com/nicholas-sc-08/P-8_CRUD/blob/main/Imagens_Readme/Gif_React.gif' width='50px' height='50px'> Instalação do Projeto
+
+<p>Iremos utilizar o Git para fazer a instalação do projeto, escolha qual o caminho no explorador de arquivos você queira colocar o projeto. Então abra o terminal do windows ou prompt de comando. Digite o comando:</p>
+
+```git
+  cd 'caminho_do_arquivo'
+```
+
+<p>Após realizar o commando, você irá clonar o projeto em sua máquina.</p>
+
+```git
+  git clone https://github.com/nicholas-sc-08/P-8_CRUD.git
+```
+
+<p>Vamos instalar as depêndencias para o projeto conseguir rodar.</p>
+
+## Instalando Depências
