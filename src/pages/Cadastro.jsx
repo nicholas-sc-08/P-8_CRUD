@@ -141,14 +141,14 @@ function Cadastro() {
             <div className="dv_inpt_senha">
 
                 <label>Senha</label>
-                <input type='password' required value={usuario.senha} onChange={e => set_usuario({...usuario, senha: e.target.value})}/>
+                <input type='password' maxLength={12} required value={usuario.senha} onChange={e => set_usuario({...usuario, senha: e.target.value})}/>
 
             </div>
 
             <div className="dv_inpt_confirmar_senha">
 
                 <label>Confirme sua Senha</label>
-                <input type='password' value={usuario.confirmar_senha} onChange={e => set_usuario({...usuario, confirmar_senha: e.target.value})}/>
+                <input type='password' maxLength={12} required value={usuario.confirmar_senha} onChange={e => set_usuario({...usuario, confirmar_senha: e.target.value})}/>
 
             </div>
 
